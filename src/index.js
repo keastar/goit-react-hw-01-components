@@ -18,7 +18,9 @@ const data = {
 const profile = (
   <div className="profile">
     <div className="description">
-      <img src={data.avatar} alt="User avatar" className="avatar" />
+      <div className="photo_avatar">
+        <img src={data.avatar} alt="User avatar" className="avatar" />
+      </div>
       <p className="name">{data.username}</p>
       <p className="tag">@{data.tag}</p>
       <p className="location">{data.location}</p>
