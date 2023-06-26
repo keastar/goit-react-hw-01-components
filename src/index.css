@@ -1,5 +1,7 @@
 @import-normalize; /* bring in normalize.css styles */
 
+/* rest of app styles */
+
 body {
   margin: 0;
   background-color: #f1feff;
@@ -11,13 +13,13 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Segoe UI',
+  sans-serif;
 }
 
-#root {
+/* #root {
  
-}
+} */
 
 .profile {
   display: flex;
@@ -49,7 +51,7 @@ code {
 .profile .description .name {
   font-size: 15pt;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .photo_avatar {
@@ -61,21 +63,19 @@ code {
     background-color: #eff8fc;
   }
   
-  .avatar {
-    width: auto;
-    height: 100%;
-    margin: 0 auto;
+.avatar {
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .stats {
-display: block;
-margin: 0;
-padding: 0;
-display: flex;
-width: 270px;
-flex-direction: row;
-justify-content: center;
-/* margin: 0 auto; */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  border-right: #cccccc solid 1px;
   background-color: rgb(208, 242, 242);
 }
 
@@ -83,12 +83,67 @@ justify-content: center;
   list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
   font-size: 10pt;
   color: #595959;
-  margin: 10px;
+  border-left: #cccccc solid 1px;
+  border-top: #cccccc solid 1px;
+  border-bottom: #cccccc solid 1px;
+  padding: 23px;
+  
 }
 
 .quantity {
+  font-size: 12pt;
   font-weight: 700;
+  padding-top: 5px;
+}
+
+.statistics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  width: 270px;
+  margin: 20px auto;
+  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.title {
+  font-size: 20px;
+  margin: 20px auto;
+}
+
+.stat-list {
+  list-style: none;
+  display: flex;
+
+ 
+  margin: 0;
+  padding:  0; 
+
+  align-content: space-between;
+ 
+}
+
+.item {
+  display: flex;
+  
+    flex-direction: column;
+    text-align: center;
+    font-size: 14pt;
+    color: #ffffff;
+    border-left: #cccccc solid 1px;
+    border-top: #cccccc solid 1px;
+    border-bottom: #cccccc solid 1px;
+    background-color: #8bcde2;
+    padding: 16px;
+    
+}
+
+.item .label {
+      font-size: 10pt;
 }
