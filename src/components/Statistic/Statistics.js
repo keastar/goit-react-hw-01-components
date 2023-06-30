@@ -4,8 +4,7 @@ import css from './Statistics.module.css';
 const Statistics = ({ title, stats }) => {
   return (
     <section className={css.statistics}>
-      <h2 className={css.title}>{title}</h2>
-
+      {title && <h2 className={css.title}>{title}</h2>}{' '}
       <ul className={css.stat_list}>
         <li className={css.item}>
           <span className={css.label}>{stats[0].label}</span>
@@ -30,7 +29,13 @@ const Statistics = ({ title, stats }) => {
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
 };
 
 export default Statistics;
