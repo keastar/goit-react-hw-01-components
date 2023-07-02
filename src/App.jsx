@@ -22,7 +22,7 @@ export default function App() {
     views={profile.stats.views}
     likes={profile.stats.likes} />
       
-    <Statistics title={title} stats={data} />
+    <Statistics stats={data} />
 
     <FriendList friends={friends} />
    
