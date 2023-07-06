@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import css from './Statistics.module.css';
 
-const Statistics = ({ stats }) => {
-  let title = true;
+const Statistics = ({ stats, title }) => {
+  let titled = true;
   return (
     <section className={css.statistics}>
-      {title && <h2 className={css.title}>{title}</h2>}
+      {titled && <h2 className={css.title}>{title}</h2>}
       {''}
       <ul className={css.stat_list}>
         <li className={css.item}>
@@ -30,7 +30,7 @@ const Statistics = ({ stats }) => {
 };
 
 Statistics.propTypes = {
-  title: PropTypes.string,
+  titled: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.exact({
       id: PropTypes.string.isRequired,
