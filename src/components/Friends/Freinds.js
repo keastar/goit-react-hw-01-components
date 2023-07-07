@@ -27,6 +27,5 @@ FriendLister.propTypes = {
       isOnline: PropTypes.bool.isRequired,
     })
   ),
-  FriendListItem: PropTypes.func,
 };
 export default FriendLister;
